@@ -1,52 +1,52 @@
 # TeleShell Executor
 
-Este é um bot do Telegram que executa comandos PowerShell enviados pelos usuários e fornece uma interface simples para gerenciar sessões em segundo plano.
+This is a Telegram bot that executes PowerShell commands sent by users and provides a simple interface for managing background sessions.
 
-## Requisitos
+## Requirements
 
 - Python 3.x
-- Bibliotecas Python: `python-telegram-bot`
+- Python Libraries: `python-telegram-bot`
 
-## Configuração
+## Configuration
 
-1. Clone este repositório:
+1. Clone this repository:
 
     ```
-    git clone https://github.com/seu-usuario/teleshell-executor.git
+    git clone https://github.com/your-username/teleshell-executor.git
     ```
 
-2. Instale as dependências:
+2. Install the dependencies:
 
     ```
     pip install python-telegram-bot
     ```
 
-3. Configure as seguintes variáveis no arquivo `config.py`:
+3. Configure the following variables in the `config.py` file:
 
-    - `TOKEN`: Token do bot do Telegram.
-    - `GRUPO_CHAT_ID`: ID do chat/grupo onde o bot irá operar.
+    - `TOKEN`: Telegram bot token.
+    - `GROUP_CHAT_ID`: ID of the chat/group where the bot will operate.
 
-## Uso
+## Usage
 
-Execute o arquivo `main.py` para iniciar o bot:
+Run the `main.py` file to start the bot:
 
 
+The bot will start and wait for commands sent by users. Additionally, it offers the following functionalities:
 
-O bot irá iniciar e aguardar por comandos enviados pelos usuários. Além disso, ele oferece as seguintes funcionalidades:
+- `/send_ps`: Send a PowerShell command for execution.
+- `/list`: List running sessions.
+- `/background`: Leave a command in the background for continuous execution.
+- `/menu`: Display the menu of options.
 
-- `/send_ps`: Enviar um comando PowerShell para execução.
-- `/list`: Listar sessões em execução.
-- `/background`: Deixar um comando em segundo plano para execução contínua.
-- `/menu`: Exibir o menu de opções.
+## Notes
 
-## Notas
+- Make sure the bot has permission to read and send messages in the specified chat/group.
 
-- Certifique-se de que o bot tem permissão para ler e enviar mensagens no chat/grupo especificado.
+## Contribution
 
-## Contribuição
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+## License
 
-## Licença
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
