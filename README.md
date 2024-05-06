@@ -39,7 +39,7 @@ Here are some common options you can use with the `sendemail` command:
 ## Example
 `sendemail -f "sender@example.com" -t "recipient@example.com" -s smtp.example.com:587 -xu your_username@gmail.com -xp your_password -u "Subject" -m "Message body"`
 
-a
+
 
 
 
