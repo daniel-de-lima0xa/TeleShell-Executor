@@ -44,4 +44,6 @@ After configuring the bot and installing the dependencies, run the Python script
 
 Contributions are welcome! Feel free to open issues to report problems or suggest improvements. If you'd like to contribute directly, you can open pull requests with your changes.
 
+## Demo
+![shell_telegram](https://github.com/daniel-de-lima0xa/TeleShell-Executor/assets/59209081/748a361a-0e03-44d3-b67a-cac7362576f1)
 
