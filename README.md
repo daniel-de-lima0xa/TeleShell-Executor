@@ -1,52 +1,47 @@
-# TeleShell Executor
+# Executor SendEmail
 
-This is a Telegram bot that executes PowerShell commands sent by users and provides a simple interface for managing background sessions.
+The Executor SendEmail is a command-line utility for sending emails from the terminal. It provides a simple interface for configuring email sending parameters.
 
 ## Requirements
 
-- Python 3.x
-- Python Libraries: `python-telegram-bot`
+To use the Executor SendEmail, you need:
+
+- A Unix-like operating system (Linux, macOS, etc.).
+- The `sendemail` command-line utility.
 
 ## Configuration
 
-1. Clone this repository:
+To configure the Executor SendEmail, follow these steps:
 
-    ```
-    git clone https://github.com/your-username/teleshell-executor.git
-    ```
+1. Check if you have the `sendemail` command-line utility installed on your system. If not, you can install it using your system's package manager or by downloading it manually.
 
-2. Install the dependencies:
+   Installation example on Ubuntu:
 
-    ```
-    pip install python-telegram-bot
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install sendemail
 
-3. Configure the following variables in the `config.py` file:
+Replace your_username@gmail.com with your Gmail username, your_password with your Gmail password, smtp.example.com with the SMTP server you wish to use, sender@example.com with the sender's email address, recipient@example.com with the recipient's email address, "Subject" with the subject of the email, and "Message body" with the body of the email.
 
-    - `TOKEN`: Telegram bot token.
-    - `GROUP_CHAT_ID`: ID of the chat/group where the bot will operate.
+## Options
 
-## Usage
+Here are some common options you can use with the `sendemail` command:
 
-Run the `main.py` file to start the bot:
+- `-o tls=no`: Disables TLS encryption.
+- `-xu your_username@gmail.com`: Specifies the username for authentication.
+- `-xp your_password`: Specifies the password for authentication.
+- `-s smtp.example.com:587`: Specifies the SMTP server and port.
+- `-f "sender@example.com"`: Specifies the sender's email address.
+- `-t "recipient@example.com"`: Specifies the recipient's email address.
+- `-u "Subject"`: Specifies the subject of the email.
+- `-m "Message body"`: Specifies the body of the email.
+
+## Example
+`sendemail -f "sender@example.com" -t "recipient@example.com" -s smtp.example.com:587 -xu your_username@gmail.com -xp your_password -u "Subject" -m "Message body"`
+
+a
 
 
-The bot will start and wait for commands sent by users. Additionally, it offers the following functionalities:
 
-- `/send_ps`: Send a PowerShell command for execution.
-- `/list`: List running sessions.
-- `/background`: Leave a command in the background for continuous execution.
-- `/menu`: Display the menu of options.
 
-## Notes
-
-- Make sure the bot has permission to read and send messages in the specified chat/group.
-
-## Contribution
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
