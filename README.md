@@ -1,47 +1,47 @@
-# Executor SendEmail
+# TeleShell-Executor
 
-The Executor SendEmail is a command-line utility for sending emails from the terminal. It provides a simple interface for configuring email sending parameters.
+This is a Telegram bot written in Python that allows you to execute PowerShell commands, list running sessions, and run sessions in the background.
 
-## Requirements
+## Features
 
-To use the Executor SendEmail, you need:
+- **Send PowerShell Command**: Use the `/send_ps` command followed by the desired PowerShell command to execute it and receive the output in the Telegram chat.
 
-- A Unix-like operating system (Linux, macOS, etc.).
-- The `sendemail` command-line utility.
+- **List Running Sessions**: With the `/list` command, you can list all the sessions currently running in the bot.
+
+- **Run Sessions in the Background**: Use the `/background` command followed by the PowerShell command to run a session in the background. This allows you to perform time-consuming tasks without blocking the bot.
+
+- **Menu of Options**: The `/menu` command displays a menu with all available options.
 
 ## Configuration
 
-To configure the Executor SendEmail, follow these steps:
+Before using the bot, you need to configure the following variables in the code:
 
-1. Check if you have the `sendemail` command-line utility installed on your system. If not, you can install it using your system's package manager or by downloading it manually.
+- `TOKEN`: Telegram bot token.
+- `GROUP_CHAT_ID`: ID of the chat group where the bot will be active.
 
-   Installation example on Ubuntu:
+## Requirements
 
-   ```bash
-   sudo apt-get update
-   sudo apt-get install sendemail
+Make sure you have Python installed on your system. Additionally, you need to install the following dependencies:
 
-Replace your_username@gmail.com with your Gmail username, your_password with your Gmail password, smtp.example.com with the SMTP server you wish to use, sender@example.com with the sender's email address, recipient@example.com with the recipient's email address, "Subject" with the subject of the email, and "Message body" with the body of the email.
+- `python-telegram-bot`: To interact with the Telegram API.
+- `subprocess`: To execute PowerShell commands.
 
-## Options
-
-Here are some common options you can use with the `sendemail` command:
-
-- `-o tls=no`: Disables TLS encryption.
-- `-xu your_username@gmail.com`: Specifies the username for authentication.
-- `-xp your_password`: Specifies the password for authentication.
-- `-s smtp.example.com:587`: Specifies the SMTP server and port.
-- `-f "sender@example.com"`: Specifies the sender's email address.
-- `-t "recipient@example.com"`: Specifies the recipient's email address.
-- `-u "Subject"`: Specifies the subject of the email.
-- `-m "Message body"`: Specifies the body of the email.
-
-## Example
-`sendemail -f "sender@example.com" -t "recipient@example.com" -s smtp.example.com:587 -xu your_username@gmail.com -xp your_password -u "Subject" -m "Message body"`
+You can install the dependencies using the following command:
 
 
+## Usage
 
+After configuring the bot and installing the dependencies, run the Python script. The bot will be active and respond to commands from the specified Telegram chat.
 
+### Supported Commands
 
+- `/send_ps <command>`: Executes the specified PowerShell command.
+- `/list`: Lists all running sessions.
+- `/background <command>`: Executes a PowerShell command in the background.
+- `/menu`: Displays a menu with all available options.
+
+## Contributions
+
+Contributions are welcome! Feel free to open issues to report problems or suggest improvements. If you'd like to contribute directly, you can open pull requests with your changes.
 
 
